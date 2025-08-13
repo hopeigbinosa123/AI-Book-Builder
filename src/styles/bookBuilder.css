@@ -1,0 +1,114 @@
+/* src/styles/bookBuilder.css */
+.book-builder {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.book-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.book-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.book-form button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-preview h2 {
+  margin-top: 2rem;
+}
+
+.book-preview ul {
+  padding-left: 1rem;
+}
+
+.book-preview li {
+  margin-bottom: 0.5rem;
+}
+
+.chapter-list ul {
+  padding-left: 1rem;
+}
+
+.chapter-list li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.cover-prompt {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.cover-text {
+  white-space: pre-wrap;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  font-family: monospace;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.image-tools ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.image-tools li {
+  margin-bottom: 0.5rem;
+}
+
+.image-tools a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.image-tools a:hover {
+  text-decoration: underline;
+}
+
+.prompt-tips ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.prompt-tips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.prompt-history pre {
+  background: #f4f4f4;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.prompt-history button {
+  margin-top: 0.5rem;
+}
+
+.prompt-tips button {
+  margin-bottom: 0.5rem;
+}

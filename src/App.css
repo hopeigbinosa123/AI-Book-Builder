@@ -40,3 +40,54 @@
 .read-the-docs {
   color: #888;
 }
+:root {
+  --bg: #fdf6f0;
+  --primary: #212121;
+  --accent: #ffc080;
+  --font: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ffb060;
+}
+
+input, select, textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font);
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

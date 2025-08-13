@@ -1,0 +1,30 @@
+/* src/styles/AdvancedSettings.css */
+.advanced-settings {
+  margin-top: 2rem;
+}
+
+.advanced-settings__toggle {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.advanced-settings__panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+
+.advanced-settings__field {
+  margin-bottom: 1rem;
+}
+
+.advanced-settings__field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+}

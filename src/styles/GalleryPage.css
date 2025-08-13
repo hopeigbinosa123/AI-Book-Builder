@@ -1,0 +1,43 @@
+.gallery {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.gallery h1 {
+  margin-bottom: 0.5rem;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery__card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.gallery__cover {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery__remix {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.gallery__remix:hover {
+  background-color: #5548d9;
+}

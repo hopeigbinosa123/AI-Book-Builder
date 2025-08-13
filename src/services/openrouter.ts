@@ -57,7 +57,7 @@ export async function queryModel(
       headers: {
         Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://yourdomain.com", // Replace with your deployed domain
+        "HTTP-Referer": "https://ai-book-builder-y6tg.vercel.app", // Replace with your deployed domain
         "X-Title": "AI Book Builder"
       },
       body: JSON.stringify(payload)

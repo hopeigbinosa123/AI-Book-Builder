@@ -1,0 +1,26 @@
+.about {
+  padding: 2rem;
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__section {
+  margin-bottom: 2rem;
+}
+
+.about__section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #6c63ff;
+}
+
+.about__section p {
+  line-height: 1.6;
+  color: #333;
+}

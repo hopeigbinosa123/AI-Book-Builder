@@ -1,69 +1,101 @@
-# React + TypeScript + Vite
+## 📘 Chronowriter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chronowriter is a **modular, frontend-only AI book builder** designed to empower creators of all skill levels. It blends intuitive UI/UX, emotionally supportive design, and flexible model orchestration to help users explore, remix, and publish their stories.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🪐 **Modular Architecture** — Reusable components for books, prompts, chapters, and models  
+- 📚 **Gallery View** — Browse saved books and regenerate content  
+- ✨ **Hero Landing Page** — Welcoming intro with emotional clarity  
+- 🧠 **Model Overview** — Claude, Mixtral, Mistral, GPT-4 (via OpenRouter)  
+- 🎨 **Custom UI Components** — Cards, buttons, grids, and responsive layouts  
+- 🌗 **Dark Mode (optional)** — Toggle via context  
+- 🔔 **Toast Notifications (optional)** — Feedback for remix/save actions  
+- 📐 **Sidebar Layout (optional)** — Dashboard-ready structure  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧱 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Layer        | Tools Used                          |
+|--------------|-------------------------------------|
+| Frontend     | React, TypeScript, React Router     |
+| Styling      | CSS Modules, Global Variables       |
+| AI Models    | Mistral-7B, Mixtral-8x7B, Claude 3 Sonnet, GPT-4 (via OpenRouter) |
+| Architecture | Modular components, context hooks   |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Getting Started
+
+```bash
+git clone https://github.com/your-username/chronowriter.git
+cd chronowriter
+npm install
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then visit `http://localhost:3000` to explore the app.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
 ```
+src/
+├── components/       # Reusable UI components (Card, Button, Grid, etc.)
+├── pages/            # Page views (HomePage, GalleryPage, AboutPage)
+├── styles/           # Global and modular CSS
+├── context/          # Theme context (optional)
+├── App.tsx           # Routing setup
+└── index.tsx         # Entry point
+```
+
+---
+
+### 🧠 Model Integration
+
+Chronowriter uses **OpenRouter** to orchestrate multiple AI models. You can plug in:
+
+- `DeepSeek`: For structured storytelling, technical clarity, and chapter generation  
+- `Claude 3 Sonnet`: For emotional tone and character arcs  
+- `GPT-4`: For fallback logic and prompt refinement  
+
+Model switching and orchestration pipelines are modular and ready to expand.
+
+
+## 💡 Philosophy
+
+Chronowriter is built on three core principles:
+
+- **Modularity** — Every component is reusable and beginner-friendly  
+- **Emotional Safety** — Clear feedback, gentle guidance, and supportive UX  
+- **Creative Flow** — Remixable content, intuitive navigation, and frictionless design  
+
+---
+
+## 📌 Roadmap
+
+- [ ] Prompt history and favorites  
+- [ ] Chapter editor with inline regeneration  
+- [ ] Download/export options  
+- [ ] ModelSwitcher component  
+- [ ] Collaborative publishing tools  
+
+---
+
+## 🤝 Contributing
+
+We welcome modular thinkers, creative coders, and emotionally aware designers. To contribute:
+
+1. Fork the repo  
+2. Create a feature branch  
+3. Submit a PR with clear documentation and modular structure  
+
+---
+
+## 📜 License
+
+MIT — feel free to remix, reuse, and build your own creative tools.

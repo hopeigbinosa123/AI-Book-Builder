@@ -1,0 +1,45 @@
+:root {
+  --primary: #6c63ff;
+  --primary-dark: #5548d9;
+  --bg: #f9f9fb;
+  --text: #333;
+  --card-bg: #fff;
+  --border: #eee;
+  --radius: 8px;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+}
+
+.light {
+  --bg: #f9f9fb;
+  --text: #333;
+  --card-bg: #fff;
+}
+
+.dark {
+  --bg: #1e1e2f;
+  --text: #eee;
+  --card-bg: #2c2c3e;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}

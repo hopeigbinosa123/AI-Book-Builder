@@ -1,0 +1,24 @@
+.home {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  max-width: 600px;
+  margin: auto;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  color: var(--text);
+}
