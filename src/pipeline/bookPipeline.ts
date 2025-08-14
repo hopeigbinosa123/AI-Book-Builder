@@ -1,16 +1,4 @@
-// src/pipeline/bookPipeline.ts
-import type { BookRequest } from '../types/types';
-
-export interface Chapter {
-  title: string;
-  content: string;
-}
-
-export interface BookData {
-  title: string;
-  chapters: Chapter[];
-  cover: string;
-}
+import type { BookRequest, Chapter, BookData } from '../types';
 
 /**
  * Simulates book generation using AI.
@@ -29,9 +17,7 @@ export async function generateBook(
     genre,
     tone = 'Neutral',
     chapters = 5,
-    wordsPerChapter = 1000,
     customPrompt = '',
-    advancedOptions,
   } = request;
 
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));

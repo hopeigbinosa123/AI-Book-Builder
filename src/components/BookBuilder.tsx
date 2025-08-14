@@ -1,4 +1,3 @@
-// src/components/BookBuilder.tsx
 import React, { useState, useEffect } from 'react';
 import BookForm from './BookForm';
 import ChapterList from './ChapterList';
@@ -36,37 +35,36 @@ const BookBuilder: React.FC = () => {
   }, [promptHistory]);
 
   const handleBookRequest = async (formData: BookRequest): Promise<void> => {
-  setLoading(true);
-  setBook(null);
-  setChapterProgress(0);
-  setLastRequest(formData);
-  setCopied(false);
-  setError(null);
+    setLoading(true);
+    setBook(null);
+    setChapterProgress(0);
+    setLastRequest(formData);
+    setCopied(false);
+    setError(null);
 
-  try {
-    const data = await generateBook(formData, mode, (index) => {
-      setChapterProgress(index);
-      if (debug) console.log(`✅ Chapter ${index} generated`);
-    });
+    try {
+      const data = await generateBook(formData, mode, (index) => {
+        setChapterProgress(index);
+        if (debug) console.log(`✅ Chapter ${index} generated`);
+      });
 
-    setBook(data);
-    setPromptHistory((prev) => [
-      ...prev,
-      { title: data.title, prompt: data.cover },
-    ]);
-  } catch (err: unknown) {
-    if (err instanceof Error) {
-      console.error('❌ Book generation failed:', err.message);
-      setError('Something went wrong while generating your book. Please try again or switch modes.');
-    } else {
-      console.error('❌ Unknown error:', err);
-      setError('An unexpected error occurred.');
+      setBook(data);
+      setPromptHistory((prev) => [
+        ...prev,
+        { title: data.title, prompt: data.cover },
+      ]);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error('❌ Book generation failed:', err.message);
+        setError('Something went wrong while generating your book. Please try again or switch modes.');
+      } else {
+        console.error('❌ Unknown error:', err);
+        setError('An unexpected error occurred.');
+      }
+    } finally {
+      setLoading(false);
     }
-  } finally {
-    setLoading(false);
-  }
-};
-
+  };
 
   const copyToClipboard = () => {
     if (book?.cover) {
@@ -123,7 +121,7 @@ const BookBuilder: React.FC = () => {
 
       {error && (
         <div className="error-message">
-                    <p>🚨 {error}</p>
+          <p>🚨 {error}</p>
           <button onClick={() => lastRequest && handleBookRequest(lastRequest)}>
             🔁 Retry Last Request
           </button>

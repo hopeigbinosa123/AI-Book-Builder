@@ -1,11 +1,10 @@
-// src/pages/BuildBookPage.tsx
 import React, { useState } from 'react';
 import BookForm from '../components/BookForm';
 import BookResult from '../components/BookResult';
 import AdvancedSettings from '../components/AdvancedSettings';
 import LiveEstimate from '../components/LiveEstimate';
 import LoadingSpinner from '../components/LoadingSpinner';
-import type { BookRequest } from '../types/types';
+import type { BookRequest, Chapter } from '../types';
 import type { AdvancedOptions } from '../components/AdvancedSettings';
 import { generateBook } from '../pipeline/bookPipeline';
 
@@ -17,10 +16,11 @@ const BuildBookPage: React.FC = () => {
     characterContinuity: true,
   });
 
+  const [mode, setMode] = useState<'fast' | 'creative'>('fast');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [title, setTitle] = useState('');
-  const [chapters, setChapters] = useState<string[]>([]);
+  const [chapters, setChapters] = useState<Chapter[]>([]);
 
   const handleGenerate = async (formData: BookRequest) => {
     const fullRequest: BookRequest = {
@@ -33,7 +33,7 @@ const BuildBookPage: React.FC = () => {
     setError(null);
 
     try {
-      const result = await generateBook(fullRequest);
+      const result = await generateBook(fullRequest, mode);
       setTitle(result.title);
       setChapters(result.chapters);
     } catch (err) {
@@ -51,7 +51,7 @@ const BuildBookPage: React.FC = () => {
       <BookForm onSubmit={handleGenerate} />
       <AdvancedSettings settings={advancedOptions} onChange={setAdvancedOptions} />
 
-      {bookRequest && <LiveEstimate formData={bookRequest} />}
+            {bookRequest && <LiveEstimate formData={bookRequest} />}
 
       {loading && <LoadingSpinner />}
       {error && <p className="build-book-page__error">{error}</p>}

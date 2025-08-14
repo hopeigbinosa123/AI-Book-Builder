@@ -1,12 +1,16 @@
-// src/types.ts
-
 export interface BookRequest {
   theme: string;
   genre: string;
   tone?: string;
-  chapters: number;
+  chapters?: number;
+  wordsPerChapter?: number;
+  customPrompt?: string;
+  model?: string;
+
   advancedOptions?: {
     namingStyle?: string;
+    outlineStrictness?: number;
+    characterContinuity?: boolean;
   };
 }
 
