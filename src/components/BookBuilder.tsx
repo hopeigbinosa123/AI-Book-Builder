@@ -43,7 +43,7 @@ const BookBuilder: React.FC = () => {
     setError(null);
 
     try {
-      const data = await generateBook(formData, mode, (index) => {
+      const data = await generateBook(formData, (index) => {
         setChapterProgress(index);
         if (debug) console.log(`✅ Chapter ${index} generated`);
       });

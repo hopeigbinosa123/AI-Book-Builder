@@ -9,7 +9,6 @@ function generateCoverPrompt(request: BookRequest): string {
 
 export async function generateBook(
   request: BookRequest,
-  mode: 'fast' | 'creative',
   onProgress?: (index: number) => void
 ): Promise<BookData> {
   const model = request.model || 'openai/gpt-oss-20b';

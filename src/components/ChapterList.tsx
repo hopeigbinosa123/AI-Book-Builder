@@ -1,6 +1,6 @@
 // src/components/ChapterList.tsx
 import React from 'react';
-import type { Chapter } from '../pipeline/bookPipeline';
+import type { Chapter } from '../types';
 
 interface ChapterListProps {
   chapters: Chapter[];
