@@ -1,6 +1,6 @@
 // src/pages/GalleryPage.tsx
 import React from "react";
-import "./GalleryPage.css";
+import "../styles/GalleryPage.css";
 
 const GalleryPage: React.FC = () => {
   // Placeholder data — replace with real saved books later

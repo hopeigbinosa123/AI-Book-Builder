@@ -1,6 +1,6 @@
 // src/pages/AboutPage.tsx
 import React from "react";
-import "./AboutPage.css";
+import "../styles/AboutPage.css";
 
 const AboutPage: React.FC = () => {
   return (

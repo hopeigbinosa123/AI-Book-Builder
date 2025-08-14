@@ -1,5 +1,5 @@
 import React from "react";
-import "./SidebarLayout.css";
+import "../styles/SidebarLayout.css";
 
 interface SidebarLayoutProps {
   sidebar: React.ReactNode;
