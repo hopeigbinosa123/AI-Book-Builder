@@ -16,7 +16,7 @@ const BuildBookPage: React.FC = () => {
     characterContinuity: true,
   });
 
-  const [mode, setMode] = useState<'fast' | 'creative'>('fast');
+  const mode = 'fast'; // Remove unused setMode
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [title, setTitle] = useState('');
@@ -33,9 +33,9 @@ const BuildBookPage: React.FC = () => {
     setError(null);
 
     try {
-      const result = await generateBook(fullRequest, mode);
-      setTitle(result.title);
-      setChapters(result.chapters);
+  const result = await generateBook(fullRequest, mode);
+  setTitle(result.title);
+  setChapters(result.chapters);
     } catch (err) {
       setError('Something went wrong while generating your book.');
       console.error(err);
@@ -57,7 +57,7 @@ const BuildBookPage: React.FC = () => {
       {error && <p className="build-book-page__error">{error}</p>}
 
       {!loading && title && chapters.length > 0 && (
-        <BookResult title={title} chapters={chapters} />
+        <BookResult title={title} chapters={chapters.map(ch => ch.title)} />
       )}
     </div>
   );

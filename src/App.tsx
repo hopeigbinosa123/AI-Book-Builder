@@ -9,8 +9,6 @@ import Favorites from "./components/Favorites";
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
-import SettingsPage from "./pages/SettingsPage";
-import NotFoundPage from "./pages/NotFoundPage";
 
 import "./styles/app.css"; // Global styles
 
@@ -26,8 +24,6 @@ const App: React.FC = () => {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>

@@ -6,7 +6,6 @@ export interface BookRequest {
   wordsPerChapter?: number;
   customPrompt?: string;
   model?: string;
-
   advancedOptions?: {
     namingStyle?: string;
     outlineStrictness?: number;
